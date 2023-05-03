@@ -34,10 +34,11 @@ for filename in os.listdir(source):
      pathofsource = os.path.join(source, filename)
      shutil.copy2(pathofsource, pathoftarget)
 
+    count +=1
+
     except IsADirectoryError:
      print("Opps! it's a directory")
-    
-    count +=1
+
 #verify the length of source
 if len(source) == count:
     print("moved")

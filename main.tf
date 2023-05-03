@@ -41,24 +41,24 @@ data "google_compute_subnetwork" "subnet1" {
   region  = "us-west1"
 }
 
-# Create a GKE Cluster in Service  subnetwork
-resource "google_container_cluster" "my-gke-cluster" {
-  name               = "my-gke-cluster"
-  location           = "us-west1"
-  initial_node_count = 1
-  network            = data.google_compute_network.network.self_link
+# # Create a GKE Cluster in Service  subnetwork
+# resource "google_container_cluster" "my-gke-cluster" {
+#   name               = "my-gke-cluster"
+#   location           = "us-west1"
+#   initial_node_count = 1
+#   network            = data.google_compute_network.network.self_link
 
-  subnetwork = data.google_compute_subnetwork.subnet.self_link
+#   subnetwork = data.google_compute_subnetwork.subnet.self_link
 
-  master_auth {
-    username = "vijul"
-    password = "v@456"
+#   master_auth {
+#     username = "vijul"
+#     password = "v@456"
 
-    client_certificate_config {
-      issue_client_certificate = false
-    }
-  }
-}
+#     client_certificate_config {
+#       issue_client_certificate = false
+#     }
+#   }
+# }
 
 # Create VM in Service Project1: 
 resource "google_compute_instance" "vm_machine1" {
