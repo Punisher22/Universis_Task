@@ -1,9 +1,12 @@
 # Universis_Task
 This is the DevOps Challenge
 
+STEP1:
+For the step1, I already have and account on gcp and have vpc so i have directly used that vpc network in my terraform file and I have directly created shared vpc
+and created vm and creatd gke cluster.
+
 
 STEP2:
-
 For this step i have created a python script and i have used 6 reference file, first i have used string slicing to extract the data (date, year, month, filetype, etc..).
 after that i have created a target path (the structure is according mentioned in the discription) and  target dir using makedirs, than after used shutil.copy to copy files from source to destination. I have also handled error using try and except, and initially i have declred a variable count =0 for source folder and after copying it 
 incremented and using len checked length for source and target for moved and removed file. I have attached script.py for step2.
